@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "pages/others/flex/flex",
+    "pages/index/index"
+  ],
+  "window": {
+    "defaultTitle": "New App"
+  }
+}
