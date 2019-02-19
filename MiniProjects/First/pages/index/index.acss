@@ -1,0 +1,95 @@
+page {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f5f8;
+}
+.swiper-item-img {
+  width: 750rpx;
+  height: 400rpx;
+}
+
+/* 商城特色 */
+.feature-ico {
+  width: 14rpx;
+  height: 14rpx;
+  margin-right: 6rpx; 
+}
+.feature {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 12px;
+  background-color: white;
+  color: gray;
+  line-height: 35px;
+}
+
+/* 推荐商品 */
+.title-items-list {
+  margin-top: 5px;
+  line-height: 35px;
+  font-size: 12px;
+  color: gray;
+  background-color: white;
+}
+.title-ico {
+  width:  20rpx;
+  height: 20rpx;
+  margin-right: 6rpx;
+}
+.title-tag {
+  margin-left: 15px;
+}
+.scroll-rec-items {
+  width: 100%;
+  white-space: nowrap;    /* 表示不需要换行 */
+  background-color: white;
+}
+.items-cover {
+  margin-left: 15rpx;
+  width: 170rpx;
+  height: 250rpx;
+  border-radius: 3rpx;
+}
+
+/* 商品上新列表 */
+.new-item-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: white;
+}
+.item-outter {
+  width: 350rpx;
+  margin-bottom: 10rpx;
+  padding: 6rpx 10rpx;
+}
+.new-item-cover {
+  margin-right: 10rpx;
+  width: inherit;
+  height: 510rpx;
+}
+.item-border {
+  height: 110rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border-left: solid 1px;
+  border-right: solid 1px;
+  border-color: #f2f5f8;
+  
+}
+.tags {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  padding: 5rpx 10rpx;
+  height: 30rpx;
+  background-color: #f2f5f8;
+  font-size: 11px;
+  color: gray;
+}
+.price-border {
+  
+}
