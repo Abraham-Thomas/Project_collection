@@ -1,5 +1,0 @@
-Page({
-  backHome() {
-    my.navigateBack();
-  }
-});

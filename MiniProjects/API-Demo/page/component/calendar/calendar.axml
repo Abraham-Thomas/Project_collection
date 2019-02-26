@@ -1,7 +1,0 @@
-<view>
-  <calendar
-    type="range"
-    tagData="{{tagData}}"
-    onSelect="handleSelect"
-    onMonthChange="onMonthChange" />
-</view>

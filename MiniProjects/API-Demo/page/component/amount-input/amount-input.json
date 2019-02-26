@@ -1,6 +1,0 @@
-{
-  "defaultTitle": "AmountInput",
-  "usingComponents": {
-    "amount-input": "mini-antui/es/amount-input/index"
-  }
-}

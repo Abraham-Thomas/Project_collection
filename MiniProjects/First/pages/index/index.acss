@@ -3,16 +3,17 @@ page {
   flex-direction: column;
   background-color: #f2f5f8;
 }
+
 .swiper-item-img {
   width: 750rpx;
   height: 400rpx;
 }
 
-/* 商城特色 */
+/* 商城特色 begin */
 .feature-ico {
   width: 14rpx;
   height: 14rpx;
-  margin-right: 6rpx; 
+  margin-right: 6rpx;
 }
 .feature {
   display: flex;
@@ -23,36 +24,38 @@ page {
   color: gray;
   line-height: 35px;
 }
+/* 商城特色 end */
 
-/* 推荐商品 */
-.title-items-list {
+/* 横向推荐商品 start */
+.title-item-list {
   margin-top: 5px;
   line-height: 35px;
   font-size: 12px;
   color: gray;
   background-color: white;
 }
-.title-ico {
-  width:  20rpx;
-  height: 20rpx;
-  margin-right: 6rpx;
-}
 .title-tag {
   margin-left: 15px;
 }
+.title-ico {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 6rpx;
+}
 .scroll-rec-items {
   width: 100%;
-  white-space: nowrap;    /* 表示不需要换行 */
-  background-color: white;
+  white-space: nowrap;
+    background-color: white;
 }
 .items-cover {
   margin-left: 15rpx;
+  border-radius: 3px;
   width: 170rpx;
   height: 250rpx;
-  border-radius: 3rpx;
 }
+/* 横向推荐商品 end */
 
-/* 商品上新列表 */
+/* 商品上新列表 begin */
 .new-item-list {
   display: flex;
   flex-direction: row;
@@ -66,9 +69,9 @@ page {
   padding: 6rpx 10rpx;
 }
 .new-item-cover {
-  margin-right: 10rpx;
-  width: inherit;
+  width: 350rpx;
   height: 510rpx;
+  margin-right: 10rpx;
 }
 .item-border {
   height: 110rpx;
@@ -79,17 +82,43 @@ page {
   border-left: solid 1px;
   border-right: solid 1px;
   border-color: #f2f5f8;
-  
 }
 .tags {
+  background-color: #f2f5f8;
+  font-size: 11px;
+
+  color: gray;
   margin-top: 10rpx;
   margin-left: 10rpx;
   padding: 5rpx 10rpx;
   height: 30rpx;
-  background-color: #f2f5f8;
-  font-size: 11px;
-  color: gray;
 }
 .price-border {
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  border-left: solid 1px;
+  border-right: solid 1px;
+  border-bottom: solid 1px;
+  border-color: #f2f5f8;
 }
+.price {
+  margin-left: 10rpx;
+  font-size: 11px;
+  color: #ff6699;
+  margin-bottom: 10rpx;
+}
+.like-counts {
+  font-size: 11px;
+  margin-right: 12rpx;
+  margin-bottom: 10rpx;
+  color: gray;
+}
+.like-ico {
+  width: 18rpx;
+  height: 18rpx;
+  margin-left: 10rpx;
+}
+/* 商品上新列表 end */

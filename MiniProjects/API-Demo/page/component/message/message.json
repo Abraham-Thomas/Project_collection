@@ -1,6 +1,0 @@
-{
-  "defaultTitle": "Message",
-  "usingComponents":{
-    "message": "mini-antui/es/message/index"
-  }
-}

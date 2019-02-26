@@ -1,6 +1,0 @@
-{
-  "defaultTitle": "Footer",
-  "usingComponents":{
-    "footer": "mini-antui/es/footer/index"
-  }
-}

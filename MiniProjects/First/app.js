@@ -1,4 +1,5 @@
 App({
+	serverUrl: "https://www.imoocdsp.com",
   onLaunch(options) {
     // 第一次打开
     // options.query == {number:1}
