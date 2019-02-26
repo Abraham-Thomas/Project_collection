@@ -35,3 +35,5 @@ ES6语法，键和值如果相同，则只要写一个就好。Home：Home, 写�
 build目录下webpack.base.conf.js中可以设置一些配置，比如在resolve中，可以将常用路径用其他形式来表示。
 
 比如'@': resolve('src'), 表示用@符号代替src目录。注意：修改配置项后要重启
+
+使用axios实现ajax发送请求，需通过npm安装相关依赖包
