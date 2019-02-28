@@ -2,9 +2,7 @@
   <div class="header">
     城市选择
     <router-link to="/">
-      <div class="header-left">
-          <span class="iconfont header-back">&#xe624;</span>
-      </div>
+      <div class="iconfont header-back">&#xe624;</div>
     </router-link>
   </div>
 </template>
