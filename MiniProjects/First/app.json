@@ -4,7 +4,9 @@
     "pages/index/index",
     "pages/shoppingCart/cart/cart",
     "pages/mine/info/info",
-    "pages/query/list/list"
+    "pages/query/list/list",
+    "pages/template/itemList/itemList",
+    "pages/query/item/item"
   ],
   "window": {
     "defaultTitle": "Go shopping",

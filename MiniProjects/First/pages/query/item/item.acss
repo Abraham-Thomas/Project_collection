@@ -1,0 +1,117 @@
+page {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f5f8;
+}
+
+/* 横向的封面图 start */
+.scroll-item-cover {
+  width: 100%;
+  background: white;
+  white-space: nowrap;
+}
+.items-cover {
+  width: 600rpx;
+  height: 885rpx;
+  margin-left: 15rpx;
+  border-radius: 3rpx;
+}
+
+/* 横向的封面图 end */
+
+/* 商品标题 start */
+.item-title {
+  font-size: 16px;
+  line-height: 40rpx;
+  background: white;
+  padding: 14rpx;
+}
+
+/* 商品标题 end */
+
+/* 商品价格 start */
+.price {
+  display: flex;
+  flex-direction: row;
+  background: white;
+}
+.item-price-low {
+  color: #ff6699;
+  font-size: 24px;
+  line-height: 30rpx;
+  padding: 10rpx;
+}
+.item-price-high {
+  color: gray;
+  font-size: 12px;
+  line-height: 30rpx;
+  padding: 18rpx 10rpx 0rpx 10rpx;
+  text-decoration: line-through;   /* 定义删除线 */
+  margin-left: 10rpx;
+}
+.item-price-discount {
+  background: #e40046;
+  color: white;
+  font-size: 12px;
+  line-height: 30rpx;
+  padding: 0 16rpx;
+  border-radius: 10px;
+  height: 28rpx;
+  margin: 15rpx 10rpx 0 20rpx;
+}
+
+/* 商品价格 end */
+
+/* 销量 收藏 发货  start*/
+.properties {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  font-size: 12px;
+  justify-content: space-between;
+  padding: 14rpx 12rpx;
+  color: #b1b1b1;
+}
+/* 销量 收藏 发货  end*/
+
+/* 商品特色 start */
+.features {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  font-size: 12px;
+  justify-content: space-between;
+  padding: 14rpx 12rpx;
+  color: #696969;
+}
+
+.feature-ico {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 8rpx;
+}
+.feature-item {
+  margin-left: 20rpx;
+}
+/* 商品特色 end */
+
+/* 商品列表的结果文字显示 start */
+.item-desc-bar {
+  margin-top: 10rpx;
+	background-color: white;
+	font-size: 12px;
+	line-height: 60rpx;
+	padding: 10rpx 0;
+	color: #ff6699;
+}
+.item-desc-title {
+	width: 150rpx;
+	border-bottom: solid 2px;
+	border-bottom-color: #ff6699;
+	margin-left: 30rpx;
+	text-align: center;
+}
+
+/* 商品列表的结果文字显示 end */
+
+

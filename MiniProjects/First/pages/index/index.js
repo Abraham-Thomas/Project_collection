@@ -82,14 +82,15 @@ Page({
 				console.log(res);
 				//获取拿到后端的数据
 				var myData = res.data;
-				if(myData.status == 200) {
+				if (myData.status == 200) {
 					var newItemList = myData.data;
+					// console.log(itemList);
 					//把新的数据重新覆盖数据绑定中原有的值
 					me.setData({
 						newItemList: newItemList
 					});
 				}
-			},
+			}
 		});
 
 	}
