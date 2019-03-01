@@ -114,4 +114,53 @@ page {
 
 /* 商品列表的结果文字显示 end */
 
+/* 商品详情内容 start */
+.item-desc-content {
+  background-color: #f2f5f8;
+  padding-top: 30rpx;
+  /* 固定底部后，商品详情页的最后100rpx内容会被遮挡 */
+  padding-bottom: 100rpx;
+}
 
+/* 商品详情内容 end */
+
+/* 底部操作栏 start */
+.bottom-operator {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: 100rpx;
+}
+.like-img {
+  width: 15%;
+  text-align: center;
+  padding-top: 14rpx;
+}
+.like-ico {
+  width: 44rpx;
+  height: 44rpx;
+}
+.like-words {
+  color: #676767;
+  font-size: 12px;
+}
+.add-to-cart {
+  width: 35%;
+  line-height: 100rpx;
+  font-size: 16px;
+  text-align: center;
+  background-color: #ffe817;
+  color: #3a3932;
+}
+.buy-me {
+  width: 35%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  background: #ff6699;
+}
+/* 底部操作栏 end */

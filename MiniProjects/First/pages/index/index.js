@@ -93,6 +93,37 @@ Page({
 			}
 		});
 
-	}
+	},
+  showItem (e) {
+    var itemId = e.target.dataset.itemId;
+    my.navigateTo({
+      url: "/pages/query/item/item?itemId=" + itemId
+    });
+  },
+  showItemList (e) {
+    var itemId = e.target.dataset.itemId;
+    var catId = e.target.dataset.catId;
+    var searchType = e.target.dataset.searchType;
+
+    if (searchType == 1) {
+      my.navigateTo({
+        url: "/pages/query/item/item?itemId=" + itemId
+      });
+    }else if(searchType == 2) {
+      my.navigateTo({
+        url: "/pages/query/list/list?searchType=cat&catId=" + catId + "&catName=搜索结果"
+      });
+    }
+  },
+
+  onShow() {
+    //测试获取购物车缓存信息并且打印
+    var cartItemIdArray = my.getStorageSync({
+      key: 'cartItemIdArray', // 缓存数据的key
+    }).data;
+    console.log("======= 首页测试购物车 start ========");
+    console.log(cartItemIdArray);
+    console.log("======= 首页测试购物车 end ========");
+  }
 	
 });

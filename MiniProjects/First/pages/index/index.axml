@@ -21,7 +21,12 @@
 
 	<block a:for="{{carousels}}" a:for-item="pic">
 		<swiper-item>
-			<image src="{{pic.imageUrl}}" class="swiper-item-img" />
+			<image src="{{pic.imageUrl}}" class="swiper-item-img"
+      data-itemId="{{pic.itemId}}"
+      data-catId="{{pic.catId}}"
+      data-searchType="{{pic.type}}"
+      onTap="showItemList"
+      />
 		</swiper-item>
 	</block>
 
@@ -69,7 +74,7 @@
 </scroll-view> -->
 <scroll-view class="scroll-rec-items" scroll-x="{{true}}">
 	<block a:for="{{featuresList}}">
-		<image src="{{item.cover}}" class="items-cover" />
+		<image src="{{item.cover}}" class="items-cover" data-itemId="{{item.id}}" onTap="showItem"/>
 	</block>
 </scroll-view>
 

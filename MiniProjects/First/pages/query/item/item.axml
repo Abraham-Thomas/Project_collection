@@ -68,3 +68,36 @@
   <view class="item-desc-title">商品详情</view>
 </view>
 
+<!-- 商品详情的具体内容展示 -->
+<view class="item-desc-content">
+  <block a:for="{{itemContentArr}}" a:for-item="content">
+    <block a:if="{{content.contentType == 1}}">
+       <view style="{{content.cssStyle}}">{{content.words}}</view>
+    </block>
+    <block a:elif="{{content.contentType == 2}}">
+       <image src="{{content.url}}" style="{{content.cssStyle}}" />
+    </block>
+  </block>
+</view>
+
+<!-- 底部操作栏 -->
+<view class="bottom-operator">
+  <view class="like-img" onTap="">
+    <image src="/resources/icon/smallIco/unlike.png" class="like-ico" />
+    <view class="like-words">购物车</view>
+  </view>
+
+  <view class="like-img" onTap="">
+    <image src="/resources/icon/smallIco/{{cartIco}}.png" class="like-ico" />
+    <view class="like-words">收藏</view>
+  </view>
+
+  <view class="add-to-cart" onTap="addToCart">
+    <!-- 定义动画组件，创建动画实例 -->
+    <view animation="{{animationInfo}}" class="animation-img"
+      style="opacity:{{animationOpacity}}; background-image: url('{{headerImagesArr[0]}}')"
+    ></view>
+    放入购物车
+    </view>
+  <view class="buy-me">购买</view>
+</view>
