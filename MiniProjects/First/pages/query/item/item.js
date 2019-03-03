@@ -31,24 +31,52 @@ Page({
     me.cartItemIncrease(itemId);
   },
 
-  //商品放入购物车
+  //跳转到购物车页面
+  goToCart() {
+    my.switchTab({
+      url: 'pages/shoppingCart/cart/cart' // 跳转的 tabBar 页面的路径（需在 app.json 的 tabBar 字段定义的页面）。注意：路径后不能带参数
+    });
+  },
+
+  // 商品放入购物车
   cartItemIncrease(itemId) {
     var me = this;
 
-    //从缓存中拿到购物车数组对象
+    // 从缓存中拿到购物车数组对象
     var cartItemIdArray = my.getStorageSync({
-      key: 'cartItemIdArray', // 缓存数据的key
+        key: 'cartItemIdArray', // 缓存数据的key
     }).data;
-    //判断cartItemIdArray是否为空
-    if(cartItemIdArray == null || cartItemIdArray == undefined) {
-      //构建空的购物车数组对象
-      cartItemIdArray = [];
+    // 判断cartItemIdArray是否为空
+    if (cartItemIdArray == null || cartItemIdArray == undefined) {
+        // 构建空的购物车数组对象
+        cartItemIdArray = [];
     }
 
-    //构建新的商品对象
-    var cartItem = app.cartItem(itemId, 1);
-    //把这个商品对象放入购物车
-    cartItemIdArray.push(cartItem);
+    //定义标识用于判断购物车缓存中是否含有当前页的商品
+    var isItemAdded = false;
+    for (var i = 0; i < cartItemIdArray.length ; i++) {
+      var item = cartItemIdArray[i];
+      if (item != null && item != undefined && item.itemId == itemId) {
+        // 删除原来的item
+        cartItemIdArray.splice(i, 1);
+        // 商品counts累加1
+        var counts = item.counts + 1;
+        // 重新构建商品对象
+        var cartItemNew = app.cartItem(itemId, counts);
+        cartItemIdArray.push(cartItemNew);
+        isItemAdded = true;
+        break;
+      }
+    }
+
+    //在没有过添加商品的时候，新创建一个对象放入数组
+    if (!isItemAdded) {
+      //构建新的商品对象
+      var cartItem = app.cartItem(itemId, 1);
+      //把这个商品对象放入购物车
+      cartItemIdArray.push(cartItem);
+    }
+    
     //把cartItemArray存入缓存
     my.setStorageSync({
       key: 'cartItemIdArray', // 缓存数据的key

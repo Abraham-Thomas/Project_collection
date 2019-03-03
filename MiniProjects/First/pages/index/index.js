@@ -117,6 +117,7 @@ Page({
   },
 
   onShow() {
+    //my.clearStorage();
     //测试获取购物车缓存信息并且打印
     var cartItemIdArray = my.getStorageSync({
       key: 'cartItemIdArray', // 缓存数据的key

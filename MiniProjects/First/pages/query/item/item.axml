@@ -82,7 +82,7 @@
 
 <!-- 底部操作栏 -->
 <view class="bottom-operator">
-  <view class="like-img" onTap="">
+  <view class="like-img" onTap="goToCart">
     <image src="/resources/icon/smallIco/unlike.png" class="like-ico" />
     <view class="like-words">购物车</view>
   </view>

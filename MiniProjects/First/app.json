@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/shoppingCart/cart/cart",
     "pages/query/category/category",
     "pages/index/index",
-    "pages/shoppingCart/cart/cart",
     "pages/mine/info/info",
     "pages/query/list/list",
     "pages/template/itemList/itemList",
