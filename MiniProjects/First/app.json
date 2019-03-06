@@ -1,21 +1,25 @@
 {
   "pages": [
-    "pages/shoppingCart/cart/cart",
-    "pages/query/category/category",
     "pages/index/index",
+    "pages/query/category/category",
+    "pages/shoppingCart/cart/cart",
     "pages/mine/info/info",
     "pages/query/list/list",
     "pages/template/itemList/itemList",
-    "pages/query/item/item"
+    "pages/query/item/item",
+    "pages/orders/confrimOrder/confrimOrder",
+    "pages/orders/addressList/addressList",
+    "pages/orders/addressInfo/addressInfo",
+    "pages/orders/payment/payment"
   ],
   "window": {
-    "defaultTitle": "Go shopping",
+    "defaultTitle": "Go Shopping",
     "titleBarColor": "#ffbfc7"
   },
   "tabBar": {
     "textColor": "#8a8a8a",
     "selectedColor": "#ff6699",
-    "backgroundColor": "#fff",
+    "backgroundColor": "#ffffff",
     "items": [
       {
         "pagePath": "pages/index/index",

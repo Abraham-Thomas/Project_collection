@@ -1,23 +1,22 @@
 <!-- 搜索栏 -->
 <view class="search">
-  <form class="search-form">
-	  <image src="/resources/icon/smallIco/search.png"
-	  		 class="search-ico"/>
-	  <input type="text" placeholder="请输入搜索商品名..."
-	  		 class="search-input" confirm-type="search"
-			 onConfirm="searchItems"/>
-  </form>
+    <form class="search-form">
+        <image src="/resources/icon/smallIco/search.png" class="search-ico" />
+        <input type="text" placeholder="请输入搜索商品名..." auto-focus class="search-input"
+                    confirm-type="search" onConfirm="searchItems" />
+    </form>
 </view>
 
 <!-- 分类 -->
 <view class="category">
-	<view class="cat-item">
-		<navigator url="/pages/query/list/list?searchType=cat&catId=0&catName=奢侈品" open-type="navigate">
-			<image src="/resources/category/0-luxury.png" class="cat-ico" />
-			<view class="cat-name">奢侈品</view>
-		</navigator>
-	</view>
-	<view class="cat-item">
+
+    <view class="cat-item">
+        <navigator url="/pages/query/list/list?searchType=cat&catId=0&catName=奢侈品" open-type="navigate">
+            <image src="/resources/category/0-luxury.png" class="cat-ico" />
+            <view class="cat-name">奢侈品</view>
+        </navigator>
+    </view>
+    <view class="cat-item">
         <navigator url="/pages/query/list/list?searchType=cat&catId=1&catName=当季新品" open-type="navigate">
             <image src="/resources/category/1-new.png" class="cat-ico"/>
             <view class="cat-name">当季新品</view>
@@ -109,6 +108,3 @@
     </view>
 
 </view>
-
-
-
