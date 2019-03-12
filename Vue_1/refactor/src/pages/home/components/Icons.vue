@@ -41,9 +41,9 @@ export default {
   .icons
     overflow: hidden
     width: 100%
+    margin-top: 4%
     height: 0
     padding-bottom: 25%
-    background: #eee
     .icon
       position: relative
       float: left
@@ -57,16 +57,16 @@ export default {
         top: 0
         left: 0
         right: 0
-        bottom: .40rem
+        bottom: .5rem
         .icon-img-content
           display: block
           margin: 0 auto
-          width: 70%
+          width: 60%
           height: 70%
       .icon-desc
         position: absolute
         left: 0
         right: 0
-        bottom: -20%
+        bottom: -10%
         text-align: center
 </style>
