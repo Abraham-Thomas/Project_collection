@@ -24,7 +24,7 @@ ES6语法，键和值如果相同，则只要写一个就好。Home：Home, 写�
 
 部分机型click事件会延迟三百毫秒，可通过npm install fastclick --save, 下载第三方的fastclick包到依赖之中，
 
---save表示不管在开发环境中还是打包上线的代码都能使用。下载后记得在main.js 中引入。
+--save表示不管在开发环境中还是打包上线的代码都能使用。下载后记得在main.js 中引入:  import fastClick from 'fastclick', 并在下面写上：fastClick.attach(document.body)，fastClick自带的方法，绑定到document.body上。
 
 ------
 
@@ -37,3 +37,14 @@ build目录下webpack.base.conf.js中可以设置一些配置，比如在resolve
 比如'@': resolve('src'), 表示用@符号代替src目录。注意：修改配置项后要重启
 
 使用axios实现ajax发送请求，需通过npm安装相关依赖包
+
+------
+
+如果要将说明文字过长的部分改为省略，可以引入样式：
+
+```
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+```
+
