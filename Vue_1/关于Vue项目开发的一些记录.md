@@ -48,3 +48,6 @@ white-space: nowrap;
 text-overflow: ellipsis;
 ```
 
+------
+
+.gitignore文件中用来设置哪些不想提交的文件或文件夹，协商路径即可，如static/mock
