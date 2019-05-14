@@ -42,10 +42,10 @@
   const BALL_LEN = 10
   const innerClsHook = 'inner-hook'
 
-  function createBalls() {
+  function createBalls () {
     let balls = []
     for (let i = 0; i < BALL_LEN; i++) {
-      balls.push({show: false})
+      balls.push({ show: false })
     }
     return balls
   }
@@ -55,7 +55,7 @@
     props: {
       selectFoods: {
         type: Array,
-        default() {
+        default () {
           return []
         }
       },
@@ -76,31 +76,31 @@
         default: true
       }
     },
-    data() {
+    data () {
       return {
         balls: createBalls(),
         listFold: this.fold
       }
     },
-    created() {
+    created () {
       this.dropBalls = []
     },
     computed: {
-      totalPrice() {
+      totalPrice () {
         let total = 0
         this.selectFoods.forEach((food) => {
           total += food.price * food.count
         })
         return total
       },
-      totalCount() {
+      totalCount () {
         let count = 0
         this.selectFoods.forEach((food) => {
           count += food.count
         })
         return count
       },
-      payDesc() {
+      payDesc () {
         if (this.totalPrice === 0) {
           return `￥${this.minPrice}元起送`
         } else if (this.totalPrice < this.minPrice) {
@@ -110,7 +110,7 @@
           return '去结算'
         }
       },
-      payClass() {
+      payClass () {
         if (!this.totalCount || this.totalPrice < this.minPrice) {
           return 'not-enough'
         } else {
@@ -119,7 +119,7 @@
       }
     },
     methods: {
-      toggleList() {
+      toggleList () {
         if (this.listFold) {
           if (!this.totalCount) {
             return
@@ -132,7 +132,7 @@
           this._hideShopCartList()
         }
       },
-      pay(e) {
+      pay (e) {
         if (this.totalPrice < this.minPrice) {
           return
         }
@@ -142,7 +142,7 @@
         }).show()
         e.stopPropagation()
       },
-      drop(el) {
+      drop (el) {
         for (let i = 0; i < this.balls.length; i++) {
           const ball = this.balls[i]
           if (!ball.show) {
@@ -153,7 +153,7 @@
           }
         }
       },
-      beforeDrop(el) {
+      beforeDrop (el) {
         const ball = this.dropBalls[this.dropBalls.length - 1]
         const rect = ball.el.getBoundingClientRect()
         const x = rect.left - 32
@@ -163,21 +163,21 @@
         const inner = el.getElementsByClassName(innerClsHook)[0]
         inner.style.transform = inner.style.webkitTransform = `translate3d(${x}px,0,0)`
       },
-      dropping(el, done) {
+      dropping (el, done) {
         this._reflow = document.body.offsetHeight
         el.style.transform = el.style.webkitTransform = `translate3d(0,0,0)`
         const inner = el.getElementsByClassName(innerClsHook)[0]
         inner.style.transform = inner.style.webkitTransform = `translate3d(0,0,0)`
         el.addEventListener('transitionend', done)
       },
-      afterDrop(el) {
+      afterDrop (el) {
         const ball = this.dropBalls.shift()
         if (ball) {
           ball.show = false
           el.style.display = 'none'
         }
       },
-      _showShopCartList() {
+      _showShopCartList () {
         this.shopCartListComp = this.shopCartListComp || this.$createShopCartList({
           $props: {
             selectFoods: 'selectFoods'
@@ -196,7 +196,7 @@
         })
         this.shopCartListComp.show()
       },
-      _showShopCartSticky() {
+      _showShopCartSticky () {
         this.shopCartStickyComp = this.shopCartStickyComp || this.$createShopCartSticky({
           $props: {
             selectFoods: 'selectFoods',
@@ -208,19 +208,19 @@
         })
         this.shopCartStickyComp.show()
       },
-      _hideShopCartList() {
+      _hideShopCartList () {
         const list = this.sticky ? this.$parent.list : this.shopCartListComp
         list.hide && list.hide()
       },
-      _hideShopCartSticky() {
+      _hideShopCartSticky () {
         this.shopCartStickyComp.hide()
       }
     },
     watch: {
-      fold(newVal) {
+      fold (newVal) {
         this.listFold = newVal
       },
-      totalCount(count) {
+      totalCount (count) {
         if (!this.fold && count === 0) {
           this._hideShopCartList()
         }
@@ -238,13 +238,16 @@
 
   .shopcart
     height: 100%
+
     .content
       display: flex
       background: $color-background
       font-size: 0
       color: $color-light-grey
+
       .content-left
         flex: 1
+
         .logo-wrapper
           display: inline-block
           vertical-align: top
@@ -257,24 +260,30 @@
           box-sizing: border-box
           border-radius: 50%
           background: $color-background
+
           .logo
             width: 100%
             height: 100%
             border-radius: 50%
             text-align: center
             background: $color-dark-grey
+
             &.highlight
               background: $color-blue
+
             .icon-shopping_cart
               line-height: 44px
               font-size: $fontsize-large-xxx
               color: $color-light-grey
+
               &.highlight
                 color: $color-white
+
           .num
             position: absolute
             top: 0
             right: 0
+
         .price
           display: inline-block
           vertical-align: top
@@ -285,28 +294,35 @@
           border-right: 1px solid rgba(255, 255, 255, 0.1)
           font-weight: 700
           font-size: $fontsize-large
+
           &.highlight
             color: $color-white
+
         .desc
           display: inline-block
           vertical-align: top
           margin: 12px 0 0 12px
           line-height: 24px
           font-size: $fontsize-small-s
+
       .content-right
         flex: 0 0 105px
         width: 105px
+
         .pay
           height: 48px
           line-height: 48px
           text-align: center
           font-weight: 700
           font-size: $fontsize-small
+
           &.not-enough
             background: $color-dark-grey
+
           &.enough
             background: $color-green
             color: $color-white
+
     .ball-container
       .ball
         position: fixed
@@ -314,6 +330,7 @@
         bottom: 22px
         z-index: 200
         transition: all 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41)
+
         .inner
           width: 16px
           height: 16px
