@@ -2,7 +2,9 @@
   "pages": [
     "pages/classic/classic",
     "pages/book/book",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/book-detail/book-detail",
+    "pages/about/about"
   ],
   "window": {
     "navigationBarBackgroundColor": "#000",
@@ -26,13 +28,13 @@
         "pagePath": "pages/book/book",
         "selectedIconPath": "/images/tab/book@highlight.png",
         "iconPath": "/images/tab/book.png",
-        "text": "书籍"
+        "text": "书香"
       },
       {
         "pagePath": "pages/my/my",
         "selectedIconPath": "/images/tab/my@highlight.png",
         "iconPath": "/images/tab/my.png",
-        "text": "喜欢"
+        "text": "个人"
       }
     ]
   },
