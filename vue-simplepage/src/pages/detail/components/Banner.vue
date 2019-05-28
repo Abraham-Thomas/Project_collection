@@ -24,10 +24,17 @@
 
 <script>
   import CommonGallary from '../../../common/gallary/Gallary'
+  import FadeAnimation from '../../../common/fade/FadeAnimation'
   export default {
     name: 'DetailBanner',
+    props: {
+      sightName: String,
+      bannerImg: String,
+      bannerImgs: Array
+    },
     components: {
-      CommonGallary
+      CommonGallary,
+      FadeAnimation
     },
     data () {
       return {

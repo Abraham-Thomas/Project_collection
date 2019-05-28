@@ -31,7 +31,7 @@
     },
     methods: {
       getCityInfo () {
-        axios.get('./mock/city.json')
+        axios.get('/mock/city.json')
           .then(this.handleGetCityInfoSucc)
       },
       handleGetCityInfoSucc (res) {

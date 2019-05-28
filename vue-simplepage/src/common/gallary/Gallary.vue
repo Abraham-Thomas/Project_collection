@@ -17,6 +17,14 @@
 <script>
   export default {
     name: 'CommonGallary',
+    props: {
+      imgs: {
+        type: Array,
+        default () {
+          return []
+        }
+      }
+    },
     data () {
       return {
         swiperOptions: {
