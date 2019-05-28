@@ -12,6 +12,16 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/city',
+      name: 'city',
+      component: () => import('./pages/city/City.vue')
+    },
+    {
+      path: '/detail/:id',
+      name: 'Detail',
+      component: () => import('./pages/detail/Detail.vue')
     }
     // 懒加载的形式{
     //   path: '/about',

@@ -17,8 +17,12 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
   export default {
-    name: 'HomeHeader'
+    name: 'HomeHeader',
+    computed: {
+      ...mapState(['city'])
+    }
   }
 </script>
 
