@@ -1,9 +1,6 @@
 import Vue from 'vue'
-import App from './App.vue'
 import './cube-ui'
-import './register'
-
-import 'common/stylus/index.styl'
+import App from './App.vue'
 
 Vue.config.productionTip = false
 
