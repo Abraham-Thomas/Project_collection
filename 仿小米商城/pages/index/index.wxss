@@ -1,0 +1,215 @@
+/**index.wxss**/
+Page {
+  width: 100%;
+  background-color: #e6e6e6;
+}
+
+/* searchBar style */
+
+.searchBar {
+  background: #ff6801;
+  overflow: hidden;
+}
+.search_box.tap{
+  background: rgba(255,247,231,.9);
+}
+.search_box {
+  position: relative;
+  background: #fff;
+  margin: 15rpx;
+  border-radius: 28rpx;
+}
+
+.in_search {
+  height: 55rpx;
+  line-height: 55rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.search_icon {
+  position: absolute;
+  top: 12rpx;
+  left: 270rpx;
+}
+.slide-image{
+  height: 100%;
+}
+/* navBar */
+.section-navBar-first, .section-navBar-second {
+  position: relative;
+  display: flex;
+  height: 160rpx;
+  align-items: center;
+  background-color: #fff;
+}
+.navBar-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+.navBar-img {
+  height: 160rpx;
+  width: 160rpx;
+}
+
+
+/* 人气推荐 */
+.recommend
+{
+  padding: 10px 5px 0 5px;
+ 
+  
+}
+.recommend-title
+{
+  background-color:#fff;
+  padding-left: 30rpx;
+  height: 82rpx;
+  line-height: 82rpx;
+  font-size: 18px;
+}
+
+.recommend-goods image
+{
+  width: 100%;
+  mode:aspectFill;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommand-detail
+{
+  background-color: #fff;
+  padding: 10px;
+  line-height: 30px;
+}
+.recommand-detail .name{
+  font-size: 18px;
+  word-spacing: 2px;
+  padding-left: 20rpx;
+}
+.recommand-detail .brief
+{
+font-size: 14px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+color: rgba(0,0,0,0.54);
+padding-left: 20rpx;
+}
+.recommand-detail .price
+{
+color: #ff6801;
+font-size: 14px;
+padding-left: 20rpx;
+}
+
+/* 商品推荐列表 */
+.items-box
+{
+  padding: 0 5px 0 5px;
+
+}
+.items-part 
+{
+  
+ display: inline-block;
+ border: 1px solid #e6e6e6;
+}
+.item-img image
+{
+  
+  width: 360rpx;
+  display:flex;
+  flex-direction: column;
+}
+.items-detail
+{
+  width: 360rpx;
+  background-color: #fff;
+
+  line-height: 20px;
+}
+.items-detail .name{
+  font-size: 14px;
+  word-spacing: 2px;
+  padding-left: 20rpx;
+}
+.items-detail .brief{
+font-size: 12px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+color: rgba(0,0,0,0.54);
+padding-left: 20rpx;
+}
+.items-detail .price
+{
+color: #ff6801;
+font-size: 14px;
+padding-left: 20rpx;
+}
+
+
+/* 猜你喜欢 */
+
+.like
+{
+  /* margin-top: 20px; */
+  padding: 0 5px 0 5px;
+ 
+}
+.title{
+  padding-left: 10px;
+  font-size: 18px;
+  color: rgb(159, 160, 161);
+  height: 50px;
+  line-height: 50px;
+}
+.like-list
+{
+ display: inline-block;
+ /* padding: 0 10rpx; */
+ /* margin-right: 5rpx; */
+ margin-bottom: 5rpx;
+ border: 2rpx solid #e6e6e6;
+ border-radius: 30rpx;
+}
+.like-pic image
+{
+  width: 100%;
+  mode:aspectFill;
+  width: 360rpx;
+  display:flex;
+  flex-direction: column;
+}
+.like-detail
+{
+  width: 360rpx;
+  background-color: #fff;
+  line-height: 20px;
+  line-height: 20px;
+  
+}
+.like-detail .shopping-name{
+  font-size: 14px;
+  word-spacing: 2px;
+  padding-left: 20rpx;
+}
+.like-detail .shopping-brief{
+font-size: 12px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+color: rgba(0,0,0,0.54);
+padding-left: 20rpx;
+}
+.like-detail .shopping-price
+{
+color: #ff6801;
+font-size: 14px;
+padding-left: 20rpx;
+}

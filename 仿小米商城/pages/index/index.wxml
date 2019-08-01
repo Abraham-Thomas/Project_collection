@@ -1,0 +1,86 @@
+<!-- index.wxml -->
+<view class="main"> 
+  <!-- 搜索框 -->
+  <view class='section searchBar '>
+    <view class='search_box {{isTap?"tap":""}}'>
+      <icon class='search_icon' type='search' size='15'></icon>
+      <input class='in_search' type='text' disabled="true" placeholder='搜索商品' bindtap="toSearch"></input>
+    </view>
+  </view>
+  <!-- swiper -->
+  <view class="header">
+    <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}" style="heigh:{{heigh}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="aspectFill" style='width:100%' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 商品导航 -->
+  <view class="section navBar">
+    <view class="section-navBar-first">
+      <navigator class="navBar-items" wx:for="{{navBar}}" wx:key="{{index}}">
+        <image class="navBar-img" src="{{item.img}}" />
+      </navigator>
+    </view>
+    <view class="section-navBar-second">
+      <navigator class="navBar-items" wx:for="{{navBarSecond}}" wx:key="{{index}}">
+        <image class="navBar-img" src="{{item.img}}" />
+        <!-- <text class='navBar-name'>{{item.name}}</text> -->
+      </navigator>
+    </view>
+  </view>
+  <!-- 人气推荐 -->
+  <view class="recommend">
+    <view class="recommend-title">
+      <text class="in-recommend">人气推荐</text>
+    </view>
+    <view class="recommend-goods">
+      <image src="https://i8.mifile.cn/v1/a1/1ece9ae5-7492-ed3f-a5ed-cbaa99985a3f.webp" />
+    </view>
+    <view class="recommand-detail">
+      <view class="name">波轮洗衣机</view>
+      <view class="brief">
+        8kg大容量 / 10种洗涤模式 / 10挡水位调节 / 耐腐蚀金属机身 / 桶自洁、桶风干模式避免细菌滋生 / 空气阻尼减震 / 免运费及基础安装费
+      </view>
+      <view class="price">￥899</view>
+    </view>
+  </view>
+  <!-- 推荐商品 -->
+  <view class="items-box" >
+    <block wx:for="{{recommand}}" wx:key="{{item.id}}">
+      <view class="items-part" bindtap="toShop" data-id="{{item.id}}" data-index="{{index}}">
+        <view class="item-img">
+          <image class="items-img" src="{{item.img}}"  />
+        </view>
+        <view class="items-detail">
+          <view class="name">{{item.name}}</view>
+          <view class="brief">{{item.brief}}</view>
+          <view class="price">{{item.price}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 猜你喜欢 -->
+    <view class="like">
+      <view class="title">
+        <text >猜你喜欢</text>
+      </view>
+        <block wx:for="{{like}}" wx:key="{{item.id}}">
+           <view class="like-list">
+          <view class="like-pic">
+            <image src="{{item.url}}"  />
+          </view>
+          <view class="like-detail">
+            <view class="shopping-name">{{item.name}}</view>
+            <view class="shopping-brief">{{item.brief}}</view>
+            <view class="shopping-price">{{item.price}}</view>
+          </view>
+          </view>
+        </block>
+     
+    </view>
+
+</view>

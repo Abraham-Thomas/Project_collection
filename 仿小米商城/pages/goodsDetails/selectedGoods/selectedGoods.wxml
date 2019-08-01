@@ -1,0 +1,53 @@
+<view class="main">
+  <view class="goods">
+    <view class="goods-img">
+      <image src="{{selectPic}}" />
+    </view>
+    <view class="goods-detail">
+      <view class="goods-detail_name">{{txt_content}} {{color}}</view>
+      <view class="price">
+        <view class="now_price">{{now_price}}元</view>
+        <view class="old_price">{{old_price}}元</view>
+        <!-- <view class="now_price">888元</view>
+        <view class="old_price">999元</view> -->
+      </view>
+    </view>
+  </view>
+  <!-- 促销 -->
+  <view class="box discount">
+    <view class="title">促销</view>
+    <view class="discount-content">
+      <view class="one">
+        <view class="gift">赠品</view>
+        <view class="txt">增米粉金元宝足金红包  (价值99元)</view>
+      </view>
+      <view class="two">
+        <view class="gift">赠品</view>
+        <view class="txt">赠米粉卡，最高含100元话费  (价值100元)</view>
+      </view>
+    </view>
+  </view>
+  <!-- 颜色 -->
+  <view class="middle">
+    <view class="goods-color">
+      <view class="colorTitle">颜色</view>
+      <view class="color">
+        <text>{{color}}</text>
+      </view>
+    </view>
+    <!-- 数量 -->
+    <view class="goods-num">
+      <view class="num">购买数量</view>
+      <view class="goods-count">
+        <view class="decreaseNum" bindtap="decrease" data-index="{{index}}" >
+          <image src="../../../images/decrease.png" />
+        </view>
+        <view class="displayNum">{{num}}</view>
+        <view class="addNum" bindtap="add" data-index="{{index}}">
+          <image src="../../../images/add.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer" bindtap="certain">确定</view>
+</view>

@@ -1,0 +1,154 @@
+/* pages/cart/cart.wxss */
+Page, .container{
+    height: 100%;
+    
+}
+.container{
+    background-color: #ececec;
+    margin: 0;
+    width: 100%;
+}
+.cart-null
+{
+  width: 100%;
+
+}
+.cart-img{
+   
+    background-color: #d4d4d4;
+    width: 200rpx;
+    height: 200rpx;
+    line-height: 200rpx;
+    text-align: center;
+    border-radius: 100rpx;
+    margin-left: 280rpx;
+    margin-top:20px ;
+    
+
+}
+.cart-img image{
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 50rpx;
+    text-align: center;
+    border-radius: 100rpx;
+    vertical-align: middle;
+    
+}
+.cart-text{
+    margin-top: 25px;
+    text-align: center
+}
+
+.btn
+{
+  background-color: #ff6700;
+  text-align: center;
+  width: 300px;
+  line-height: 100rpx;
+  border-radius: 5rpx;
+  color: white;
+  margin-left: 40px;
+  margin-top: 50px;
+}
+/* 商品信息 */
+.carts-box{
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  display: flex;
+  border-bottom: 2rpx solid #d4d4d4;
+}
+
+.cart-goods{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.icon, .goods-img,.allselected
+{
+  margin-left: 30rpx;
+}
+.icon image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.goods-img image
+{
+  width: 80rpx;
+  height: 80rpx;
+  vertical-align: middle;
+}
+.item-name text
+{
+  font-size: 28rpx;
+  letter-spacing: 1rpx;
+}
+.item-name
+{
+  margin-left: 20rpx;
+}
+.item-name,.price-num
+{
+  display: flex;
+  vertical-align: middle;
+
+}
+.price-num
+{
+
+  position:fixed;
+  right: 50rpx;
+ 
+}
+.num{ 
+  font-size: 26rpx;
+  color: #a5a3a3;
+  letter-spacing: 5rpx;
+}
+.price
+{
+  color: #ff6700;
+  font-size: 32rpx;
+  
+}
+
+/* 底部 */
+.footer
+{
+  display: flex;
+  background-color: #fff;
+  font-size: 28rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+}
+.icon
+{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.sum
+{
+margin-left: 160rpx;
+}
+.sum text
+{
+  width: 60rpx;
+  color: #ff6700;
+  padding-left: 20rpx;
+}
+.account
+{
+  background-color:#ff6700;
+  color: #fff;
+  font-size: 32rpx;
+  width: 200rpx;
+  text-align: center;
+  letter-spacing: 2rpx;
+  position:fixed;
+  right: 0;
+}

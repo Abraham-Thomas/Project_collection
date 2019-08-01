@@ -7,7 +7,7 @@ const tips = {
 }
 
 class HTTP{
-  request(params){
+  request (params) {
     // url, data, method,
     if (!params.method) {
       params.method = "GET"

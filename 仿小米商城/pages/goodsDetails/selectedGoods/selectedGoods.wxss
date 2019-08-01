@@ -1,0 +1,183 @@
+Page{
+  background-color:#e6e6e6;
+}
+.goods
+{
+  margin-top: 10rpx;
+  background-color: #fff;
+  display: flex;
+  border-bottom: 1rpx solid rgb(247, 244, 244);
+  width: 100%;
+  height: 240rpx;
+}
+.goods-img {
+  /* border: 1px solid #e6e6e6; */
+  vertical-align: middle;
+}
+.goods-img image{
+  width: 180rpx;
+  height: 180rpx;
+  border: 1px solid #e6e6e6;
+  margin: 30rpx 0 30rpx 30rpx;
+  border-radius: 5rpx;
+  
+}
+.goods-detail
+{
+  margin-left: 40rpx;
+  /* line-height: 16rpx; */
+}
+.goods-detail_name
+{
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  letter-spacing: 1rpx;
+}
+.price
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15rpx;
+}
+.price .now_price
+{
+color: #ff6801;
+font-size: 28rpx;
+
+}
+.price .old_price{
+  color: rgba(0,0,0,0.54);
+  font-size: 22rpx;
+  text-decoration: line-through;
+  margin-left: 18rpx;
+}
+
+/* 促销 */
+.title{
+  color: rgb(182, 178, 178);
+  font-size: 26rpx;
+  margin-left: 30rpx;
+}
+.box{
+  background-color:#fff;
+  border: 1rpx solid rgb(240, 237, 237);
+  
+}
+.txt
+{
+  font-size: 14px;
+  margin-left: 15rpx;
+}
+.one, .two{
+  display: flex;
+}
+.discount
+{
+  display: flex;
+  height: 70px;
+
+  padding-top: 20rpx;
+}
+.gift{
+  background-color: #fff;
+  border: 1px solid #ff6801;
+  color: #ff6801;
+  border-radius: 5rpx;
+  font-size: 12px;
+  width: 30px;
+  text-align: center;
+  margin-left: 35rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 颜色 */
+.middle
+{
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+.goods-color
+{
+  background-color: #fff;
+ height: 170rpx;
+
+ border-bottom: 1px solid rgb(236, 233, 233);
+}
+.colorTitle
+{
+  font-size: 30rpx;
+  color: rgb(182, 178, 178);
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+}
+.color{
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+   border:1rpx solid #ff6801;
+  border-radius: 5rpx;
+  text-align: center;
+ margin-left: 50rpx;
+ color: #ff6801;
+ font-size: 28rpx;
+ margin-top: 20rpx;
+}
+
+/* 购买数量 */
+.goods-num
+{
+  height: 120rpx;
+  display: flex;
+}
+.num
+{
+ color: rgb(167, 164, 164);
+ font-size: 30rpx;
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+  /* display: flex; */
+
+}
+
+.goods-count
+{
+  display: flex;
+  margin-left: 260rpx;
+  margin-top: 20rpx;
+}
+.decreaseNum,.addNum,.displayNum{
+  border: 1rpx solid #e6e6e6;
+  border-radius: 5rpx;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.decreaseNum image
+{
+  width: 60rpx;
+  height: 60rpx;
+}
+.addNum image
+{
+  width: 60rpx;
+  height: 60rpx;
+
+}
+
+
+.footer
+{
+  background-color: #ff6801;
+  color: #fff;
+  font-size: 32rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+}
+

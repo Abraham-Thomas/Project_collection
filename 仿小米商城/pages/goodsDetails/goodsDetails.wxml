@@ -1,0 +1,111 @@
+
+<!-- pages/goodsDetails/goodsDetails.wxml -->
+<view class="page">
+  <!-- 图片轮播 -->
+  <view class="swiper-box">
+    <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true" style='height:825rpx'>
+     <block wx:for="{{imgUrls}}" wx:key="item">
+     <!-- <block wx:for="{{goodsDataList}}" wx:key="{{item.id}}"  style="heigh:{{heigh}}"> -->
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="widthFix" style='width:100%' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 商品信息 -->
+  <view class="detail">
+    <!-- <block wx:for="{{goodsDataList}}"  wx:key="{{item.id}}" data-id="{{item.id}}"> -->
+    <block>
+    <view class="name">{{name}}</view>
+    <view class="brief">{{brief}}</view>
+    <view class="price">
+      <view class="now_price">
+        {{now_price}}元
+        <text>{{old_price}}元</text>
+      </view>
+    </view>
+     </block>
+  </view>
+  <!-- 送至 促销 -->
+  <view class="shopping-content">
+    <view class="box adress">
+      <view class="title">送至</view>
+      <view class="txt-content ">南昌市    青山湖区</view>
+      <view class="s"></view>
+    </view>
+    <view class="box discount">
+      <view class="title">促销</view>
+      <view class="discount-content">
+        <view class="one">
+          <view class="gift">赠品</view>
+          <view class="txt">增米粉金元宝足金红包  (价值99元)</view>
+        </view>
+        <view class="two">
+          <view class="gift">赠品</view>
+          <view class="txt">赠米粉卡，最高含100元话费  (价值100元)</view>
+        </view>
+      </view>
+    </view>
+    <view class="box selected">
+      <view class="title">已选</view>
+      <view class="txt-content">{{txt_content}}</view>
+      <view class="s"></view>
+    </view>
+    <view class="xiaomi">
+      <view class="pic">
+        <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAChklEQVR4Ab3YA6zkUBgF4Lu2bdu2bdu2bdu2Ea1t27ZtW7OnyZnkz9s2r+3emSRfJlf/PaNKfW6pnAgB5aAHbIAH4KFnsAv6QxWI5KS23YkpYDp8AI8DSyGnjiBRYR54hF0wCApCKogHcRg2L3SF9SaBkrgNUhLeiGKjuZmyKR70gc+iRn2nQeqLxdsgESiXIsJKUa+f3SAyRH9QmjQXdbsFFqSgmNwGlGYVrL4mOSkMfOWkvqB8pIEIk9gsyAoO7gDlY0u415GAQRJw4DdE9EOQUPCWe+aAfxIOBaVZGCgNwUAJTbjnfmA6dFAEzSGCwQXWLgdKEkfqeEajog9/G6dY+wokNBlfwPEWRmM4Gx01h9jPulchlMWcapyz3GgcZSOrpgDB4agIER6UhSScd9do/GQjvqYQp+2EoMic+0WJH2oMk4lZ4Q6MdhjifGAhKIj3pCiDxDGZWEiMdwVlRXwd1yEkKJteeIN8ZAGr64W6Ikwni4PTEREivMMrvt/eIIdZJBsoC+VFmM4BQpx3E4LicO1r+fftAMpBmMhwju0rTkNQEa7fLv/Lm2wsrC7CvObrJQgByoXRrNHDaERk46etHxnPERZ/Uafus05Gb8d6+WO0oQYs/s8QxbjnLXn2TcvOjxAElB/c4J6VZRDDFg4s90OIkdzrttkVWmzwUF0fhsgj9skjg1hdTxYDpVla+MH6YwK7nRgmwtTUGKIgfGfdWXZvsPqJMBPEccKt4aLeTKe3nB3E4gfQ2MU/qhpcFHWGub0JzwH7RaHnMA3KQVIIC4pCQ2IoAZPgjlh3GorqeCxRHnaKwtILeGoxdhJqa3s+IqSD9rAa7oh/gNdj2AZd5dncjr+ClBUwCf4HjgAAAABJRU5ErkJggg==" />
+        <text>小米自营</text>
+        <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAChklEQVR4Ab3YA6zkUBgF4Lu2bdu2bdu2bdu2Ea1t27ZtW7OnyZnkz9s2r+3emSRfJlf/PaNKfW6pnAgB5aAHbIAH4KFnsAv6QxWI5KS23YkpYDp8AI8DSyGnjiBRYR54hF0wCApCKogHcRg2L3SF9SaBkrgNUhLeiGKjuZmyKR70gc+iRn2nQeqLxdsgESiXIsJKUa+f3SAyRH9QmjQXdbsFFqSgmNwGlGYVrL4mOSkMfOWkvqB8pIEIk9gsyAoO7gDlY0u415GAQRJw4DdE9EOQUPCWe+aAfxIOBaVZGCgNwUAJTbjnfmA6dFAEzSGCwQXWLgdKEkfqeEajog9/G6dY+wokNBlfwPEWRmM4Gx01h9jPulchlMWcapyz3GgcZSOrpgDB4agIER6UhSScd9do/GQjvqYQp+2EoMic+0WJH2oMk4lZ4Q6MdhjifGAhKIj3pCiDxDGZWEiMdwVlRXwd1yEkKJteeIN8ZAGr64W6Ikwni4PTEREivMMrvt/eIIdZJBsoC+VFmM4BQpx3E4LicO1r+fftAMpBmMhwju0rTkNQEa7fLv/Lm2wsrC7CvObrJQgByoXRrNHDaERk46etHxnPERZ/Uafus05Gb8d6+WO0oQYs/s8QxbjnLXn2TcvOjxAElB/c4J6VZRDDFg4s90OIkdzrttkVWmzwUF0fhsgj9skjg1hdTxYDpVla+MH6YwK7nRgmwtTUGKIgfGfdWXZvsPqJMBPEccKt4aLeTKe3nB3E4gfQ2MU/qhpcFHWGub0JzwH7RaHnMA3KQVIIC4pCQ2IoAZPgjlh3GorqeCxRHnaKwtILeGoxdhJqa3s+IqSD9rAa7oh/gNdj2AZd5dncjr+ClBUwCf4HjgAAAABJRU5ErkJggg==" />
+        <text>小米发货</text>
+        <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAAEEfUpiAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTM0Q0I5OUM1QjA3MTFFN0JGODhGRDI4MUI3RDYzMEUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTM0Q0I5OUQ1QjA3MTFFN0JGODhGRDI4MUI3RDYzMEUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowQTEwRUI3RjVCMDMxMUU3QkY4OEZEMjgxQjdENjMwRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowQTEwRUI4MDVCMDMxMUU3QkY4OEZEMjgxQjdENjMwRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PiaKuJUAAANESURBVHjaYmBAgFAQwYQkIAgTCGXABwACiBlKmwAxCxB/BHGEkBSEYdXmg8QOBwggZCuFcCk0RZNIQzdSjoFIgO4isP0AAcSMJADyhy8QywLxPQZsqtGAP0ooQoEBmiIekBX/gPgNUtB9RlIQCArtW/hcDlLggMR/ik2RPg7NLMgcdyDmReKbgRwIYgAEEDOW+A0BYl0g/gvEX6CeEAZiC6hGkMkvsSWMcLQ0hQ84QF0Fd2s4DoUG2CIfFsZAHMwETTYbcSh6jccVIO+xMEEZvAxkApABe4DYCYe8KB69ZuiJLgCI7YmwlB0aZuBoZMSigBcawsxY5EA2nkYWAAggRhy2gHKZGjSv/oImwQtA/AddIboBekCsCQ39S0D8DojZgFgBmmRBiWodNJFhzWBeBPwvBPW/ILqEO56YwBZz4chhxIOzCIOkQgMcLoGXpyDbt5GYft5B9YJTIgs0NTKQmJwvArEhEwP54AEQSxNjwE8c4qD0wUqMAW9wiIMKmfcMeMoCQgAU7XJM0PRthicapfHk1EfIRT87CbZ7oZfGPFBDWIh0egCuMi4cj3d4oSnWnVB2BtWoSljEQTlwJ1rdxAAQoPdyeWkgBsL4Zq0PcBVXfKEgKiIehHpW8FQ8+B+LPYggyF56UKg3T0p9gYiK0FLNwG8kLNtt0qoD32EhyTcz+2VmYjxcTrjiq54hRtQNSXCzj8p7OiCk+xYzFl+otpn3vsSmcHoNjheL8yJnTAFxDUW02NSJhrNxgpnnVtVdR0yuyW9bvFuclFxBtWmnnUlmXvusl993yJ5rismPAyqcG4vMM7JdR7EZPcPHZM+6NqgK4tqg7GUDpvkxYG3GrxbO+5juJ3b5h6R5U66t2Glwz9H/mXKl4kCbj7EhDrwNXK9c7RFUmaL6p4BDRMAfkLcCHdi0WJJiJRlocNerOm952oqDuYB9CVxSmhsx5MdMTUcFz6ayAqMO+LayWTi6cHZMbsyvUX5F4acs/A2TQA8sFinLdR0Pi3pByuIJKtwFc9QgJhHvWUxafFqc6Rzi0w0lIzvUidi5+3eI9Y3JSFWdoIVl52HQ5SV41WsgNgHRVDh8gSxJVKN6neghEt0DTno1sW924pQ4FvSLuQAAAABJRU5ErkJggg==" />
+        <text>不支持7天无理由退货</text>
+      </view>
+    </view>
+  </view>
+  <!-- 用户评价 -->
+  <view class="estimate">
+    <view class="user-esimate">
+      <view class="text">用户评价 （1845）</view>
+      <span class="check">查看全部评价</span>
+    </view>
+  </view>
+  <!-- 概述 -->
+  <view class='section good_all_info'>
+    <view class="all_info_navbar">
+      <view class="details_bar {{navbarHidden?'':'.active'}}" bindtap="detailsActive">
+        <text>概述</text>
+      </view>
+      <view class='param_bar {{!navbarHidden?"":".active"}}' bindtap='paramActive'>
+        <text>参数</text>
+      </view>
+    </view>
+    <!-- 详情图 -->
+    <view class='all_info_items'>
+      <view class='details_item' wx:if='{{!navbarHidden}}'>
+        <!-- <block wx:for="{{goodsDataList}}" wx:key="{{item.id}}"> -->
+          <block wx:for="{{details_img}}" wx:key="index">
+          <view class='details_img'>
+            <image src='{{item}}' mode='widthFix'></image>
+          </view>
+        </block>
+      </view>
+      <view class="param_item" wx:if="{{navbarHidden}}">
+        <!-- <block wx:for="{{goodsDataList}}" wx:key="{{item.id}}"> -->
+          <block>
+          <view class="param_img">
+            <image src='{{param_img}}' mode='widthFix'></image>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <!-- 底部按钮 -->
+  <view class="section footer">
+    <view class="footer_cart">
+      <text wx:if="{{cat_allGood_num>0}}">{{cat_allGood_num}}</text>
+      <image src='../../images/cartselect.png' mode='widthFix' bindtap='toCart'></image>
+    </view>
+    <view class="add_cart" data-id="{{id}}" bindtap='addCart'>加入购物车</view>
+    <view class="add_cart_now">立即购买</view>
+  </view>
+</view>

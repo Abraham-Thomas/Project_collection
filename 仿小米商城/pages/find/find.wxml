@@ -1,0 +1,33 @@
+<!--pages/find/find.wxml-->
+<view class="main">
+    <view class="navBar">
+        <block wx:for="{{details}}" wx:key="*this">
+            <navigator class='navBar_item' url='{{item.navUrl}}'>
+                <view class="navBar-img">
+                    <image src="{{item.img}}" />
+                </view>
+                <view class="navBar-title">
+                <text >{{item.text}}</text>
+                </view>
+            </navigator>
+        </block> 
+    </view>
+
+    <view class="content">
+        <block wx:for="{{contentDate}}" wx:key="*this">
+            <view class="content-box" >
+                <navigator class="content-item-url" url="{{Url}}">
+                <view class="img"> 
+                    <image src="{{item.pictures}}" />
+                </view>
+                <view class="img-title">
+                    <text >专题</text>{{item.text}}
+                </view>
+                 </navigator>
+            </view>
+        </block>
+    </view> 
+
+
+</view>
+ 

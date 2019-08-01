@@ -82,6 +82,18 @@ Page({
       })
   },
 
+  async userAuthorized2() {
+    const data = await promisic(wx.getSetting)()
+    if (data.authSetting['scope.userInfo']) {
+      const res = await promisic(wx.getUserInfo)()
+      const userInfo = res.userInfo
+      this.setData({
+        authorized: true,
+        userInfo
+      })
+    }
+  },
+
   userAuthorized() {
     wx.getSetting({
       success: data => {
